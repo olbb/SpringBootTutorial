@@ -4,6 +4,7 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.reflect.MethodSignature;
+import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Method;
 
@@ -11,6 +12,7 @@ import java.lang.reflect.Method;
  * @author JuanLv created at 2023/8/28
  */
 @Aspect
+@Component
 public class LogAspect {
 
     @Around("execution(* com.example.demo.service.*.*(..))")
