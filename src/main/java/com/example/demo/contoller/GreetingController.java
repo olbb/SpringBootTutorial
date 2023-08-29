@@ -18,4 +18,9 @@ public class GreetingController {
         return new Greeting(counter.incrementAndGet(), String.format(template, name));
     }
 
+    @GetMapping("/")
+    public String index() {
+        return "Greetings from Spring Boot!";
+    }
+
 }
