@@ -14,10 +14,13 @@ import java.util.List;
 @Service
 public class UserServiceImp {
 
-    @Autowired
     private UserDaoImp mDao;
 
+    public UserServiceImp(UserDaoImp userDaoImp) {
+        mDao = userDaoImp;
+    }
+
     public List<User> queryUserList() {
-        return mDao.queryUserList();
+        return mDao.findAll();
     }
 }

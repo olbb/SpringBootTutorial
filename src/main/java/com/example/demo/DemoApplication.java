@@ -13,10 +13,10 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class DemoApplication {
 
 	public static void main(String[] args) {
-//		SpringApplication.run(DemoApplication.class, args);
-		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext("com.example.demo");
-		UserServiceImp userServiceImp = ctx.getBean(UserServiceImp.class);
-		userServiceImp.queryUserList().forEach(System.out::println);
+		SpringApplication.run(DemoApplication.class, args);
+//		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext("com.example.demo");
+//		UserServiceImp userServiceImp = ctx.getBean(UserServiceImp.class);
+//		userServiceImp.queryUserList().forEach(System.out::println);
 
 	}
 

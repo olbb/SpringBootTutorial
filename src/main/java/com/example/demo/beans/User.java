@@ -1,39 +1,42 @@
 package com.example.demo.beans;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
 /**
  * @author JuanLv created at 2023/8/28
  */
+@Entity
+@Table(name = "tb_user")
 public class User {
 
-    private String name;
-    private String age;
+    @Id
+    private int userId;
+    private String userName;
 
-    public User(String name, String age) {
-        this.name = name;
-        this.age = age;
+
+    public int getUserId() {
+        return userId;
     }
 
-    public String getName() {
-        return name;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getUserName() {
+        return userName;
     }
 
-    public String getAge() {
-        return age;
-    }
-
-    public void setAge(String age) {
-        this.age = age;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     @Override
     public String toString() {
         return "User{" +
-                "name='" + name + '\'' +
-                ", age='" + age + '\'' +
+                "userId=" + userId +
+                ", userName='" + userName + '\'' +
                 '}';
     }
 }

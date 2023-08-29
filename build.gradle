@@ -18,8 +18,11 @@ repositories {
 dependencies {
  	implementation 'org.springframework.boot:spring-boot-starter'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'org.aspectj:aspectjrt'
-	implementation 'org.aspectj:aspectjweaver'
+	//h2 数据库
+	implementation 'com.h2database:h2'
+	//jpa orm
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
