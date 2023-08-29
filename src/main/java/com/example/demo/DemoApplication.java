@@ -1,23 +1,17 @@
 package com.example.demo;
 
-import java.util.Arrays;
-
-import com.example.demo.service.UserServiceImp;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import java.util.Arrays;
 
 @SpringBootApplication
 public class DemoApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
-//		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext("com.example.demo");
-//		UserServiceImp userServiceImp = ctx.getBean(UserServiceImp.class);
-//		userServiceImp.queryUserList().forEach(System.out::println);
-
 	}
 
 	public CommandLineRunner commandLineRunner(ApplicationContext ctx) {

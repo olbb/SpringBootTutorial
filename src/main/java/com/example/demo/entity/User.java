@@ -1,4 +1,4 @@
-package com.example.demo.beans;
+package com.example.demo.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -14,6 +14,14 @@ public class User {
     @Id
     private int userId;
     private String userName;
+
+    public User() {
+    }
+
+    public User(int userId, String userName) {
+        this.userId = userId;
+        this.userName = userName;
+    }
 
 
     public int getUserId() {

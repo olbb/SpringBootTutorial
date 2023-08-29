@@ -1,9 +1,9 @@
 package com.example.demo.service;
 
 
-import com.example.demo.beans.User;
+import com.example.demo.entity.User;
 import com.example.demo.dao.UserDaoImp;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.example.demo.service.api.IUserService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.List;
  * @author JuanLv created at 2023/8/28
  */
 @Service
-public class UserServiceImp {
+public class UserServiceImp implements IUserService {
 
     private UserDaoImp mDao;
 
@@ -20,7 +20,8 @@ public class UserServiceImp {
         mDao = userDaoImp;
     }
 
-    public List<User> queryUserList() {
+    @Override
+    public List<User> findAll() {
         return mDao.findAll();
     }
 }
