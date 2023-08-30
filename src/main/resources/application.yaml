@@ -1,4 +1,9 @@
+server:
+  port: 80
+
 spring:
+  application:
+    name: greeting
   datasource:
     driverClassName: org.h2.Driver
     url: jdbc:h2:mem:dbtest
