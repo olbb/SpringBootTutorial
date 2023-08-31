@@ -24,4 +24,9 @@ public class UserServiceImp implements IUserService {
     public List<User> findAll() {
         return mDao.findAll();
     }
+
+    @Override
+    public User findUser(long id) {
+        return mDao.findById(id).orElse(null);
+    }
 }

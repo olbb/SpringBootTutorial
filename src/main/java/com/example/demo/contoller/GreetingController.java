@@ -20,7 +20,7 @@ public class GreetingController {
 
     @GetMapping("/")
     public String index() {
-        return "Greetings from Spring Boot 04!";
+        return "Greetings from Spring Boot!";
     }
 
 }

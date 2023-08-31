@@ -12,19 +12,19 @@ import jakarta.persistence.Table;
 public class User {
 
     @Id
-    private int userId;
+    private long userId;
     private String userName;
 
     public User() {
     }
 
-    public User(int userId, String userName) {
+    public User(long userId, String userName) {
         this.userId = userId;
         this.userName = userName;
     }
 
 
-    public int getUserId() {
+    public long getUserId() {
         return userId;
     }
 

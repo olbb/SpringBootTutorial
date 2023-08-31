@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
  * @author JuanLv created at 2023/8/28
  */
 @Repository
-public interface UserDaoImp extends JpaRepository<User, Integer> {
+public interface UserDaoImp extends JpaRepository<User, Long> {
 
 }

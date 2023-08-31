@@ -11,4 +11,6 @@ public interface IUserService {
 
     List<User> findAll();
 
+    User findUser(long id);
+
 }
